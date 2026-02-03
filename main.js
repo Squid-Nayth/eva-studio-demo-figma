@@ -1,196 +1,113 @@
 import './style.css'
 
-// Generate random code-like texture strings
+// --- Utility Functions ---
+
 function generateTexture() {
-    const chars = '0123456789ABCDEF+/*-.,:;[]{}<>=?@#';
-    let texture = '';
-    // Generate more lines for scrolling effect
-    for (let i = 0; i < 100; i++) {
-        texture += chars.charAt(Math.floor(Math.random() * chars.length)) + '<br>';
-    }
-    return texture;
+  const chars = '0123456789ABCDEF+/*-.,:;[]{}<>=?@#';
+  let texture = '';
+  for (let i = 0; i < 100; i++) {
+    texture += chars.charAt(Math.floor(Math.random() * chars.length)) + '<br>';
+  }
+  return texture;
 }
 
-document.querySelector('#app').innerHTML = `
-  <div class="bg-texture">
-    <div class="texture-column" style="animation-duration: 20s;">${generateTexture()}</div>
-    <div class="texture-column" style="margin-top: 50px; animation-duration: 25s; animation-name: scrollTextureReverse;">${generateTexture()}</div>
-    <div class="texture-column" style="animation-duration: 18s;">${generateTexture()}</div>
-    <div class="texture-column" style="margin-top: 100px; animation-duration: 30s; animation-name: scrollTextureReverse;">${generateTexture()}</div>
-    <div class="texture-column" style="animation-duration: 22s;">${generateTexture()}</div>
-  </div>
-
-  <nav class="nav">
-    <div class="menu-icon">
-      <a href="/" style="text-decoration:none;">
-        <span class="nav-logo-text">
-            <span>&gt;</span><span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">EVA</span><span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">|</span>
-        </span>
-      </a>
-    </div>
-    <div class="user-actions">
-      <a href="/404.html" style="margin-right: 0; cursor: pointer; text-decoration: none; color: inherit;">À propos</a>
-      <a href="/message.html" style="text-decoration:none;"><button class="subscribe-btn">Contact</button></a>
-      <div class="lang-switch">
-        <span class="lang-option active">FR</span>
-        <span class="lang-option">EN</span>
-      </div>
-    </div>
-  </nav>
-
-  <main class="hero-content">
-    <h1 class="main-title" id="typewriter"></h1>
-    
-    <div class="subtitle">
-      Agence de développement web<br>
-      <em>créative</em> à Paris
-    </div>
-
-    <div class="description">
-      Nous créons des sites web et des applications mobiles pour les entreprises.
-    </div>
-
-    <div class="actions">
-      <a href="/realisations.html" class="btn btn-secondary">Nos réalisations</a>
-      <a href="/contact.html" class="btn btn-primary">Demander un devis</a>
-    </div>
-
-    <div class="services-section">
-      <span class="clients-label">Nos Services</span>
-      <div class="services-grid">
-        <div class="service-tag">Développement Web</div>
-        <div class="service-tag">Développement Mobile</div>
-        <div class="service-tag">Référencement SEO</div>
-        <div class="service-tag">Analyse de conformité</div>
-        <div class="service-tag">Refonte Web</div>
-      </div>
-    </div>
-
-    <div class="collaborators-section">
-      <span class="clients-label">Notre Équipe</span>
-      <div class="collaborators">
-      <div class="collaborator">
-        <img src="/assets/Meyland.jpeg" alt="Meyland" class="avatar" />
-        <span class="name"> Allan Meyland</span>
-      </div>
-      <div class="collaborator">
-        <img src="/assets/nathan.jpeg" alt="Nathan" class="avatar" />
-        <span class="name">Nathan Michel</span>
-      </div>
-      </div>
-    </div>
-
-    <div class="clients-section">
-      <span class="clients-label">Nos Clients</span>
-      <div class="client-logos">
-        <div class="client-item">
-          <img src="/assets/screenfix-new.png" alt="Screenfix" class="client-logo white-filter" style="height: 65px;" />
-        </div>
-        <div class="client-item">
-          <img src="/assets/Capture-Chims.png" alt="Chim's Heritage" class="client-logo" style="height: 28px;" />
-          <span class="client-text">Chim's Heritage</span>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <span class="nav-logo-text" style="font-size: 1.5rem;">
-                <span style="color:white">&gt;</span><span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">EVA</span><span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">|</span>
-            </span>
-            <div class="footer-socials">
-                <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="footer-column">
-            <h4>Ressources</h4>
-            <ul class="footer-links">
-                <li><a href="/realisations.html">Nos Projets</a></li>
-                <li><a href="/404.html">À propos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h4>Légal</h4>
-            <ul class="footer-links">
-                <li><a href="#">Mentions Légales</a></li>
-                <li><a href="#">Confidentialité</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2026 EVA Studio. Built with Figma.</p>
-        <div class="footer-legal-links">
-            <a href="#" class="btn-footer">Paramètres des cookies</a>
-        </div>
-    </div>
-  </footer>
-`
-
-// Typewriter Logic for Main Title
-const titleEl = document.getElementById('typewriter');
-// We want ">" white, and "EVA" blue.
-// Current logic types ">EVA".
-// The simpler way to achieve specific coloring during typing is to separate the content.
-const prefix = ">"; // White
-const textToType = "EVA"; // Blue
-const fullText = prefix + textToType;
-let typeIdx = 0;
-
-// Helper to wrap text in color
-const toBlue = (str) => `<span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">` + str + `</span>`;
-const toWhite = (str) => `<span style="color: white; -webkit-text-fill-color: white;">` + str + `</span>`;
-
-if (titleEl) {
-    titleEl.innerHTML = toBlue('<span class="cursor">|</span>');
+function initTexture() {
+  const columns = document.querySelectorAll('.texture-column');
+  columns.forEach(col => {
+    col.innerHTML = generateTexture();
+  });
 }
 
-function typeWriter() {
+// --- Page-Specific Logic ---
+
+// Home Page: Typewriter
+function initHome() {
+  const titleEl = document.getElementById('typewriter');
+  if (!titleEl) return;
+
+  const prefix = ">";
+  const textToType = "EVA";
+  const fullText = prefix + textToType;
+  let typeIdx = 0;
+
+  const toBlue = (str) => `<span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">` + str + `</span>`;
+  const toWhite = (str) => `<span style="color: white; -webkit-text-fill-color: white;">` + str + `</span>`;
+
+  titleEl.innerHTML = toBlue('<span class="cursor">|</span>');
+
+  function typeWriter() {
     if (!titleEl) return;
 
-    // Construct the string based on how many chars we have typed from " >EVA "
-    // We treat the sequence as ">" then "E" then "V" then "A".
     let currentHTML = "";
-
     if (typeIdx < fullText.length) {
-        // Build the currently visible string
-        const currentStr = fullText.slice(0, typeIdx + 1);
+      const currentStr = fullText.slice(0, typeIdx + 1);
+      let whitePart = "";
+      let bluePart = "";
 
-        // Split into parts for coloring
-        let whitePart = "";
-        let bluePart = "";
-
-        if (currentStr.startsWith(">")) {
-            whitePart = ">";
-            if (currentStr.length > 1) {
-                bluePart = currentStr.slice(1);
-            }
-        } else {
-            // Should not happen with ">EVA" start
-            bluePart = currentStr;
+      if (currentStr.startsWith(">")) {
+        whitePart = ">";
+        if (currentStr.length > 1) {
+          bluePart = currentStr.slice(1);
         }
+      } else {
+        bluePart = currentStr;
+      }
 
-        currentHTML = toWhite(whitePart) + toBlue(bluePart) + toBlue('<span class="cursor">|</span>');
-        titleEl.innerHTML = currentHTML;
+      currentHTML = toWhite(whitePart) + toBlue(bluePart) + toBlue('<span class="cursor">|</span>');
+      titleEl.innerHTML = currentHTML;
 
-        typeIdx++;
-        setTimeout(typeWriter, 200 + Math.random() * 100);
+      typeIdx++;
+      setTimeout(typeWriter, 200 + Math.random() * 100);
     } else {
-        // Final state
-        titleEl.innerHTML = toWhite(">") + toBlue("EVA") + toBlue('<span class="cursor blink">|</span>');
+      titleEl.innerHTML = toWhite(">") + toBlue("EVA") + toBlue('<span class="cursor blink">|</span>');
     }
+  }
+
+  setTimeout(typeWriter, 800);
 }
 
-// Start typing after a short delay
-setTimeout(typeWriter, 800);
+// Contact Page: Booking Logic (Placeholder for interactivity if needed)
+function initContact() {
+  const bookingContainer = document.querySelector('.booking-container');
+  if (!bookingContainer) return;
+
+  // Add event listeners for time slots or calendar days if required
+  const slots = document.querySelectorAll('.time-slot');
+  slots.forEach(slot => {
+    slot.addEventListener('click', () => {
+      slots.forEach(s => s.classList.remove('selected'));
+      slot.classList.add('selected');
+    });
+  });
+
+  const days = document.querySelectorAll('.calendar-day:not(.disabled)');
+  days.forEach(day => {
+    day.addEventListener('click', () => {
+      days.forEach(d => d.classList.remove('selected'));
+      day.classList.add('selected');
+    });
+  });
+}
+
+// Message Page: Form Handling
+function initMessage() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    console.log('Form submitted:', Object.fromEntries(formData));
+    alert('Merci pour votre message ! Nous vous recontacterons bientôt.');
+    form.reset();
+  });
+}
+
+// --- App Initialization ---
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTexture();
+  initHome();
+  initContact();
+  initMessage();
+});

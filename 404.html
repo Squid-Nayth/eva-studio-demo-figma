@@ -1,12 +1,26 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erreur 404 - EVA Studio</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/404.js"></script>
-  </body>
+    <title>404 - EVA Studio</title>
+</head>
+<body>
+    <div id="app">
+        <div class="bg-texture">
+            <div class="texture-column" style="animation-duration: 20s;"></div>
+            <div class="texture-column" style="margin-top: 50px; animation-duration: 25s; animation-name: scrollTextureReverse;"></div>
+            <div class="texture-column" style="animation-duration: 18s;"></div>
+            <div class="texture-column" style="margin-top: 100px; animation-duration: 30s; animation-name: scrollTextureReverse;"></div>
+            <div class="texture-column" style="animation-duration: 22s;"></div>
+        </div>
+
+        <main class="hero-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+            <h1 class="main-title" style="font-size: 10rem; margin: 0; line-height: 1;">404</h1>
+            <p style="font-size: 1.5rem; color: var(--color-text-muted); margin-bottom: 2rem;">Cette page est introuvable ou en cours de développement.</p>
+            <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+        </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
 </html>
