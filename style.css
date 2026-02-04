@@ -166,6 +166,7 @@ body {
   max-width: 800px;
   position: relative;
   z-index: 2;
+  padding-top: 6rem; /* Push content down from the absolute navbar */
 }
 
 .main-title {
@@ -204,7 +205,7 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.2;
-  margin: 2rem 0;
+  margin: 3rem 0;
   color: #e2e8f0;
   font-family: var(--font-main);
 }
@@ -266,7 +267,7 @@ body {
 .actions {
   display: flex;
   gap: 1.5rem;
-  margin: 3rem 0;
+  margin: 4rem 0;
   justify-content: center;
 }
 
@@ -751,8 +752,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 .services-grid {
@@ -789,6 +790,137 @@ body {
   }
   .footer-brand {
     grid-column: span 2;
+  }
+  
+  .back-link-wrapper {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  #app {
+    padding: 1rem;
+    justify-content: flex-start;
+    padding-top: 6rem;
+  }
+
+  .nav {
+    padding: 0 1.5rem;
+    top: 1.5rem;
+  }
+
+  .nav-logo-text {
+    font-size: 1.2rem;
+  }
+
+  .user-actions {
+    gap: 1rem;
+  }
+
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .collaborators {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .client-logos {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .booking-container {
+    flex-direction: column;
+  }
+
+  .booking-sidebar, .booking-calendar, .booking-slots {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box;
+  }
+
+  .booking-slots {
+    border-bottom: none;
+    max-height: none;
+  }
+
+  .texture-column:nth-child(even) {
+    display: none;
+  }
+  .texture-column {
+    width: 30%;
+  }
+
+  .case-study-image-container {
+    height: 250px;
+  }
+
+  .project-name {
+    font-size: 1.5rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .user-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-content {
+    padding-top: 0;
+  }
+  
+  .footer-legal-links {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
