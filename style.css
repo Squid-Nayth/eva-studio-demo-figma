@@ -255,12 +255,32 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+.collaborator-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
 .name {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.name:hover {
+  color: #60a5fa;
+}
+
+.role {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: lowercase;
+  opacity: 0.8;
+  margin-top: 0.2rem;
 }
 
 /* Actions */
