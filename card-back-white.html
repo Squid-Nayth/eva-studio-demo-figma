@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de Visite - Dos (White) - EVA Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8fafc;
+        }
+        .business-card {
+            width: 850px;
+            height: 480px;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+        .sidebar {
+            width: 35%;
+            background: #f1f5f9;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main-info {
+            width: 65%;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .studio-name {
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 2rem;
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .value {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        .name-title {
+            margin-bottom: 3rem;
+        }
+        .full-name {
+            font-family: var(--font-main);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+        .role-badge {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.3rem 0.8rem;
+            background: rgba(37, 99, 235, 0.05);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 4px;
+            color: #2563eb;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .services-list {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .mini-tag {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.6rem;
+            background: #f8fafc;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 50px;
+            color: #64748b;
+        }
+        .corner-accent {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-right: 2px solid #2563eb;
+            border-bottom: 2px solid #2563eb;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="sidebar">
+            <div class="studio-name">
+                <span style="color:#0f172a">&gt;</span><span style="color: #2563eb;">EVA</span>|
+            </div>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="label">Email</span>
+                    <span class="value">nathanmichel@eva-studio.dev</span>
+                </div>
+                <div class="contact-item">
+                    <span class="label">Site web de l'agence</span>
+                    <span class="value">eva-studio.dev</span>
+                </div>
+                <div class="contact-item">
+                    <span class="label"Siège</span>
+                    <span class="value">Évry-courcouronnes, France</span>
+                </div>
+                <div class="contact-item">
+                    <span class="label">Téléphone</span>
+                    <span class="value">+33 7 62 90 69 70</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-info">
+            <div class="name-title">
+                <h1 class="full-name">Nathan Michel</h1>
+                <span class="role-badge">Co-fondateur & Développeur Front-End</span>
+            </div>
+            <div class="services-list">
+                <span class="mini-tag">Développement Web</span>
+                <span class="mini-tag">Développement App</span>
+                <span class="mini-tag">UX/UI</span>
+                <span class="mini-tag">Optimisation SEO</span>
+            </div>
+        </div>
+        <div class="corner-accent"></div>
+    </div>
+</body>
+</html>

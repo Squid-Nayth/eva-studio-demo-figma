@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de Visite - Face (White) - EVA Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8fafc;
+        }
+        .business-card {
+            width: 850px;
+            height: 480px;
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 50% 0%, #eff6ff 0%, #ffffff 60%);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+        }
+        .card-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.08;
+            pointer-events: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .card-texture-column {
+            font-family: monospace;
+            font-size: 8px;
+            color: #2563eb;
+            word-break: break-all;
+            width: 10%;
+        }
+        .logo-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .logo-text {
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 5rem;
+            color: #0f172a;
+            letter-spacing: -0.05em;
+        }
+        .logo-bracket {
+            color: #0f172a;
+        }
+        .logo-eva {
+            color: #2563eb;
+        }
+        .logo-pipe {
+            color: #0f172a;
+        }
+        .tagline {
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-family: var(--font-main);
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="card-texture">
+            <div class="card-texture-column">01010101101010101101010101101010101101010101101010101101010101101010101101010101101010101101010101101010101</div>
+            <div class="card-texture-column" style="margin-top: 50px;">RANDOM_DATA_772_EVA_STUDIO_MODE_ACCESS_GRANTED_INIT_SESSION_001010101101010101101010101101010101101010101</div>
+            <div class="card-texture-column">01010101101010101101010101101010101101010101101010101101010101101010101101010101101010101101010101101010101</div>
+            <div class="card-texture-column" style="margin-top: 100px;">CREATE_INNOVATE_DEVELOP_DEPLOY_REPEAT_001010101101010101101010101101010101101010101101010101101010101101010101</div>
+            <div class="card-texture-column">01010101101010101101010101101010101101010101101010101101010101101010101101010101101010101101010101101010101</div>
+        </div>
+        <div class="logo-container">
+            <div class="logo-text">
+                <span class="logo-bracket">&gt;</span><span class="logo-eva">EVA</span><span class="logo-eva">|</span>
+            </div>
+            <div class="tagline">Votre agence de développement web <span class="logo-eva">créative</span></div>
+        </div>
+    </div>
+</body>
+</html>

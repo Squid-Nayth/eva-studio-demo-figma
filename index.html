@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eva Studio Demo</title>
+    <title>Eva Studio - Agence Web Paris</title>
     <link rel="icon" type="image/jpeg" href="./assets/EVA.jpeg">
 </head>
 <body>
     <div id="app">
+        <!-- Background Texture Animation -->
         <div class="bg-texture">
             <div class="texture-column" style="animation-duration: 20s;"></div>
             <div class="texture-column" style="margin-top: 50px; animation-duration: 25s; animation-name: scrollTextureReverse;"></div>
@@ -16,17 +17,25 @@
             <div class="texture-column" style="animation-duration: 22s;"></div>
         </div>
 
+        <!-- Navigation -->
         <nav class="nav">
             <div class="menu-icon">
-                <a href="./index.html" style="text-decoration:none;">
+                <a href="#" style="text-decoration:none;">
                     <span class="nav-logo-text">
-                        <span>&gt;</span><span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">EVA</span><span style="color: #60a5fa; -webkit-text-fill-color: #60a5fa;">|</span>
+                        <span>&gt;</span><span class="logo-eva">EVA</span><span class="logo-eva">|</span>
                     </span>
                 </a>
             </div>
             <div class="user-actions">
-                <a href="./404.html" style="margin-right: 0; cursor: pointer; text-decoration: none; color: inherit;">À propos</a>
-                <a href="./message.html" style="text-decoration:none;"><button class="subscribe-btn">Contact</button></a>
+                <a href="#about" style="margin-right: 1.5rem; text-decoration: none; color: inherit; font-size: 0.95rem; font-weight: 500;">À propos</a>
+                <a href="#services" style="margin-right: 1.5rem; text-decoration: none; color: inherit; font-size: 0.95rem; font-weight: 500;">Services</a>
+                <a href="#projects" style="margin-right: 1.5rem; text-decoration: none; color: inherit; font-size: 0.95rem; font-weight: 500;">Réalisations</a>
+                <a href="#faq" style="margin-right: 1.5rem; text-decoration: none; color: inherit; font-size: 0.95rem; font-weight: 500;">FAQ</a>
+                <a href="#contact" style="text-decoration:none;"><button class="subscribe-btn">Contact</button></a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme" style="background: none; border: none; cursor: pointer; color: var(--color-text); display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; opacity: 0.7; transition: opacity 0.3s ease;">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
                 <div class="lang-switch">
                     <span class="lang-option active">FR</span>
                     <span class="lang-option">EN</span>
@@ -34,68 +43,537 @@
             </div>
         </nav>
 
-        <main class="hero-content">
-            <h1 class="main-title" id="typewriter"></h1>
-            
-            <div class="subtitle">
-                Agence de développement web<br>
-                <em>créative</em> à Paris
-            </div>
+        <main>
+            <!-- Hero Section -->
+            <section class="section hero-content">
+                <h1 class="main-title">
+                    Nous concevons des<br>
+                    <span id="rotating-text" class="rotating-text-blue"></span><br>
+                    qui valorisent votre image
+                </h1>
+                
+                <p class="hero-tagline">
+                    EVA STUDIO, votre partenaire Franco-gabonais pour des solutions digitales innovantes. Nous transformons vos idées en experiences numériques exceptionnelles à Libreville, partout en Afrique et dans le monde entier.
+                </p>
 
-            <div class="description">
-                Nous créons des sites web et des applications mobiles pour les entreprises.
-            </div>
-
-            <div class="actions">
-                <a href="./realisations.html" class="btn btn-secondary">Nos réalisations</a>
-                <a href="./contact.html" class="btn btn-primary">Demander un devis</a>
-            </div>
-
-            <div class="services-section">
-                <span class="clients-label">Nos Services</span>
-                <div class="services-grid">
-                    <div class="service-tag">Développement Web</div>
-                    <div class="service-tag">Développement Mobile</div>
-                    <div class="service-tag">Référencement SEO</div>
-                    <div class="service-tag">Analyse de conformité</div>
-                    <div class="service-tag">Refonte Web</div>
+                <div class="actions">
+                    <a href="#projects" class="btn btn-secondary">Nos réalisations</a>
+                    <a href="#services" class="btn btn-primary">Découvrir nos services</a>
                 </div>
-            </div>
+            </section>
 
-            <div class="collaborators-section">
-                <span class="clients-label">Notre Équipe</span>
-                <div class="collaborators">
-                    <div class="collaborator">
-                        <img src="./assets/Meyland.jpeg" alt="Meyland" class="avatar" />
-                        <div class="collaborator-info">
-                            <a href="https://meyland-man.vercel.app/" target="_blank" class="name">Allan Meyland</a>
-                            <span class="role">développeur backend</span>
+
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                
+                <span class="section-subtitle">À PROPOS DE NOUS</span>
+                <h2 class="section-title">L'agence qui transforme<br><span class="italic-blue">vos idées</span></h2>
+                <p class="section-description" style="text-align: center; max-width: 800px; margin: -2rem auto 4rem; color: var(--color-text-muted);">
+                    Découvrez notre approche unique et notre équipe passionnée par l'innovation numérique.
+                </p>
+
+                <div class="about-container" style="position: relative; width: 100%;">
+                    
+                    <!-- Full Column Grid for Text -->
+                    <div class="about-grid-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; text-align: left; margin-bottom: 4rem; position: relative; z-index: 2;">
+                        
+                        <!-- Left Column: Text Content -->
+                        <div class="about-text-column glass-panel">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                                <h3 style="font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; color: var(--color-text); text-transform: uppercase; margin: 0;">EVA STUDIO</h3>
+                            </div>
+                            
+                            <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                                <strong>EVA Studio est une agence numérique</strong> créative spécialisée dans la conception de solutions digitales innovantes et personnalisées.
+                            </p>
+                            
+                            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 2.5rem;">
+                                Notre mission est d'aider les entreprises à se développer grâce à des stratégies numériques efficaces, qu'il s'agisse de sites web, d'applications mobiles ou d'identités visuelles percutantes.
+                            </p>
+
+                            <h4 style="color: var(--color-text); font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="color: #60a5fa;">★</span> Ce qui nous distingue
+                            </h4>
+                            
+                            <ul style="list-style: none; padding: 0; margin-bottom: 2.5rem;">
+                                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; color: var(--color-text);">
+                                    <span style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.7rem;">✓</span>
+                                    Expertise dans les dernières technologies
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; color: var(--color-text);">
+                                    <span style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.7rem;">✓</span>
+                                    Équipe pluridisciplinaire d'experts
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; color: var(--color-text);">
+                                    <span style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.7rem;">✓</span>
+                                    Suivi personnalisé de chaque projet
+                                </li>
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; color: var(--color-text);">
+                                    <span style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.7rem;">✓</span>
+                                    Solutions sur mesure et évolutives
+                                </li>
+                            </ul>
+
+                            <a href="#contact" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                                Discuter de votre projet
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+
+                        <!-- Right Column: Spacer for animation visibility -->
+                        <div class="about-spacer-column" style="height: 400px;"></div>
+                    </div>
+
+                    <!-- Background Cards Animation (Full Width) -->
+                    <div id="cards-section" style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 100%; transform: translate(-50%, -50%); z-index: 1; pointer-events: none; opacity: 0.8;">
+                        <div id="cardStream" class="cards-container" style="width: 100%; height: 100%;">
+                            <canvas id="particleCanvas" style="width: 100%; height: 100%;"></canvas>
+                            <canvas id="scannerCanvas" style="width: 100%; height: 100%;"></canvas>
+                            <div class="card-stream" style="width: 100%;">
+                                <div id="cardLine" class="card-line"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="collaborator">
-                        <img src="./assets/nathan.jpeg" alt="Nathan" class="avatar" />
-                        <div class="collaborator-info">
-                            <a href="https://nathannkombe.tech/" target="_blank" class="name">Nathan Michel</a>
-                            <span class="role">développeur front-end</span>
+                </div>
+
+
+
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="section services-section">
+                <span class="section-subtitle">NOS SERVICES</span>
+                <h2 class="section-title">Nos Services</h2>
+                <p style="text-align: center; color: var(--color-text-muted); max-width: 600px; margin: -2rem auto 4rem;">
+                    Nous proposons une gamme complète de services numériques sur-mesure pour donner vie à vos projets et transformer votre business.
+                </p>
+
+                <div class="services-grid-cards">
+                    <!-- Service 1: Cyan/Blue -->
+                    <div class="service-card service-card-blue">
+                        <div class="service-icon-wrapper" style="background: rgba(6, 182, 212, 0.1); color: #06b6d4;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <h3 class="service-title">Développement Web & App</h3>
+                        <p class="service-description">Créez une présence en ligne performante et adaptée à vos besoins spécifiques.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Sites vitrine et e-commerce</li>
+                            <li><span class="check-icon">✓</span> Applications web et mobiles (PWA)</li>
+                            <li><span class="check-icon">✓</span> Optimisation des performances</li>
+                            <li><span class="check-icon">✓</span> Maintenance et support technique</li>
+                        </ul>
+                        <a href="#" class="service-link">En savoir plus</a>
+                    </div>
+
+                    <!-- Service 2: Purple -->
+                    <div class="service-card service-card-purple">
+                        <div class="service-icon-wrapper" style="background: rgba(168, 85, 247, 0.1); color: #a855f7;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                        </div>
+                        <h3 class="service-title">Conception Graphique</h3>
+                        <p class="service-description">Donnez vie à votre marque avec un design moderne et impactant.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Identité visuelle (Logo, Charte)</li>
+                            <li><span class="check-icon">✓</span> Maquettes UI/UX</li>
+                            <li><span class="check-icon">✓</span> Design System complet</li>
+                        </ul>
+                        <a href="#" class="service-link">En savoir plus</a>
+                    </div>
+
+                    <!-- Service 3: Orange -->
+                    <div class="service-card service-card-orange">
+                        <div class="service-icon-wrapper" style="background: rgba(249, 115, 22, 0.1); color: #f97316;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h3 class="service-title">Maintenance et Stratégie</h3>
+                        <p class="service-description">Assurez la performance et la sécurité de votre présence numérique sur le long terme.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Audit et conseil stratégique</li>
+                            <li><span class="check-icon">✓</span> Hébergement et déploiement, avec nom de domaine en bonus</li>
+                            <li><span class="check-icon">✓</span> Analyse de données et SEO</li>
+                            <li><span class="check-icon">✓</span> Mise à jour régulière et support continue</li>
+                        </ul>
+                        <a href="#" class="service-link">En savoir plus</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Projects Section -->
+            <section id="projects" class="section projects-section">
+                <span class="section-subtitle">Nos réalisations</span>
+                <h2 class="section-title" style="margin-bottom: 1rem;">découvrez à quoi pourrait<br>ressembler <span class="italic-blue">votre projet</span></h2>
+                <p style="text-align: center; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 4rem; font-weight: 500;">Projets récents</p>
+                
+                <div class="case-study-list">
+                    <div class="case-study-card">
+                        <div class="case-study-image-container">
+                             <div class="corner-marker top-left"></div>
+                             <div class="corner-marker top-right"></div>
+                             <div class="corner-marker bottom-left"></div>
+                             <div class="corner-marker bottom-right"></div>
+                             <div class="badge-new">New</div>
+                             <div class="case-study-preview" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 20px;">
+                                <img src="./assets/Capture d’écran 2026-02-16 à 01.40.32.png" alt="Screenfix Capture" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+                             </div>
+                        </div>
+                        <div class="case-study-info">
+                            <div class="info-header">
+                                <h2 class="project-name">Screenfix</h2>
+                                <a href="https://screenfix.fr/" class="launch-link" target="_blank">Voir le site</a>
+                            </div>
+                            <div class="project-metrics">
+                                100 visiteurs par semaine<br>
+                                5 demandes de rendez-vous par jour
+                            </div>
+                            <div class="project-meta">
+                                <span class="meta-label">Industrie :</span> Réparation et vente
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="clients-section">
-                <span class="clients-label">Nos Clients</span>
-                <div class="client-logos">
-                    <div class="client-item">
-                        <img src="./assets/screenfix-new.png" alt="Screenfix" class="client-logo white-filter" style="height: 65px;" />
+            <!-- Team Section -->
+            <!-- Process Section -->
+            <section id="process" class="section process-section">
+                <span class="section-subtitle">NOTRE PROCESS</span>
+                <h2 class="section-title">Du brief au lancement,<br>votre site <span class="italic-blue">clé en main</span></h2>
+                
+                <div class="process-grid">
+                    <!-- Step 1 -->
+                    <div class="process-card">
+                        <div class="process-tag">Aujourd'hui</div>
+                        <div class="process-image-container">
+                            <div class="process-mockup discovery-mockup">
+                                <div class="webcam-box">
+                                    <div class="webcam-face person-1"></div>
+                                    <div class="webcam-face person-2"></div>
+                                    <div class="call-controls">
+                                        <span class="control-dot"></span>
+                                        <span class="control-dot"></span>
+                                        <span class="control-dot red"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-card-content">
+                            <span class="process-step">ÉTAPE 01</span>
+                            <h3 class="process-step-title">Réservez un appel de découverte</h3>
+                            <p class="process-step-desc">30 minutes pour comprendre votre vision, analyser vos besoins et identifier les leviers qui feront la différence sur votre site.</p>
+                        </div>
                     </div>
-                    <div class="client-item">
-                        <img src="./assets/Capture-Chims.png" alt="Chim's Heritage" class="client-logo" style="height: 28px;" />
-                        <span class="client-text">Chim's Heritage</span>
+
+                    <!-- Step 2 -->
+                    <div class="process-card">
+                        <div class="process-tag">Design</div>
+                        <div class="process-image-container">
+                            <div class="process-mockup design-mockup">
+                                <div class="figma-canvas">
+                                    <div class="canvas-item item-before">avant</div>
+                                    <div class="canvas-arrow">→</div>
+                                    <div class="canvas-item item-after">après</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-card-content">
+                            <span class="process-step">ÉTAPE 02</span>
+                            <h3 class="process-step-title">Design qui convertit</h3>
+                            <p class="process-step-desc">Du wireframe au design final, tout est pris en main : structure, copywriting, UI/UX. Chaque élément est pensé pour convertir.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-card">
+                        <div class="process-tag">Intégration</div>
+                        <div class="process-image-container">
+                             <div class="process-mockup launch-mockup">
+                                <div class="integration-board">
+                                    <div class="code-terminal">
+                                        <div class="code-line" style="width: 40%;"></div>
+                                        <div class="code-line" style="width: 70%;"></div>
+                                        <div class="code-line" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="process-card-content">
+                            <span class="process-step">ÉTAPE 03</span>
+                            <h3 class="process-step-title">Intégration & lancement</h3>
+                            <p class="process-step-desc">Votre page est développée puis déployée en ligne. Nous prenons également en charge l'hébergement, le SEO et la mise à jour : vous n'avez plus qu'à observer votre site optimisé, performant et prêt à générer des résultats pour vos affaires.</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="process-cta-container">
+                    <a href="#contact" class="btn btn-primary" style="background: white; color: black; border: none; font-size: 1.1rem; padding: 1.2rem 3rem; border-radius: 50px; font-weight: 700; display: inline-flex; align-items: center; gap: 0.8rem; box-shadow: 0 10px 30px rgba(255,255,255,0.1); transition: all 0.3s ease;">Discuter de votre projet <span style="font-size: 1.4rem;">→</span></a>
+                </div>
+            </section>
+
+
+            <!-- Clients/Trust Section -->
+            <section class="section clients-section" style="text-align: center;">
+                <span class="section-subtitle">NOS PARTENAIRES</span>
+                <h2 class="section-title">Ils nous font<br><span class="italic-blue">confiance</span></h2>
+                <p style="text-align: center; color: var(--color-text-muted); max-width: 700px; margin: -2rem auto 4rem; font-size: 1.1rem;">
+                    Nous sommes fiers de collaborer avec des organisations qui partagent notre vision de l'excellence et de l'innovation.
+                </p>
+
+                <div class="client-logos" style="display: flex; justify-content: center; align-items: center; gap: 5rem; flex-wrap: wrap;">
+                    <div class="client-item" style="height: auto; opacity: 1;">
+                        <img src="./assets/screenfix-new.png" alt="Screenfix" class="client-logo white-filter" style="height: 100px; width: auto;" />
+                    </div>
+                    <div class="client-item" style="height: auto; opacity: 1; gap: 1.5rem;">
+                        <img src="./assets/Capture-Chims.png" alt="Chim's Heritage" class="client-logo" style="height: 45px; width: auto;" />
+                        <span class="client-text" style="font-size: 1.5rem;">Chim's Heritage</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="section faq-section">
+                <span class="section-subtitle">FAQ</span>
+                <h2 class="section-title">Questions Fréquentes</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Qu’est-ce qui vous différencie des autres agences ou freelances ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            Contrairement à une agence traditionnelle qui livre un site fonctionnel mais peu esthétique avec des designs et des technologies datées comme Wordpress, peu orientée business avec une faible intégration SEO et pas du tout conçue pour les appareils mobiles, nous, chez EVA STUDIO mettons l’accent sur le ROI : copywriting, structure optimisée, stratégie SEO et design premium qui inspire confiance. Notre process est rapide, clair et adapté aux startups, agences et infopreneurs.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Combien coûte la création d'un site web ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            Le coût dépend de la complexité du projet (site vitrine, e-commerce, application sur mesure). Contactez-nous pour un devis personnalisé adapté à vos besoins et budget.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quels sont les délais de réalisation ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            En général, un site vitrine prend 2 à 4 semaines, tandis qu'un projet plus complexe peut demander 2 à 3 mois. Nous établissons un planning précis dès le début du projet.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Comment démarrer une collaboration avec EVA Studio ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            C'est simple ! Contactez-nous via notre formulaire en ligne ou par email. Nous organiserons une consultation initiale gratuite pour discuter de votre projet et de vos objectifs, avant de vous proposer une solution personnalisée.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quelles sont vos méthodes de paiement ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            Nous acceptons plusieurs méthodes de paiement incluant les chèques, les paiements via les plateformes locales : MobiCash et Airtel Money, virements bancaires, les paiements par carte bancaire, et les paiements échelonnés pour les projets de grande envergure.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Proposez-vous des services de maintenance après la livraison ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            Absolument. Nous offrons des contrats de maintenance et de support pour assurer le bon fonctionnement de votre solution à long terme. Ces services comprennent les mises à jour de sécurité, l'optimisation des performances, la correction de bugs, et l'ajout de nouvelles fonctionnalités.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Offrez-vous un support technique en continu ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            Oui, nous proposons plusieurs niveaux de support technique, du support standard pendant les heures de bureau jusqu'au support premium 24/7 pour les applications critiques. Nos équipes réactives sont prêtes à résoudre rapidement tout problème qui pourrait survenir.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Peut-on mettre à jour le contenu nous-mêmes ?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            Oui, pour certains projets nous mettrons à votre disposition des outils appelés CMS ce qui vous permettra de modifier vos textes, images et blogs en toute autonomie et sans connaissance technique. Nous vous fournissons également en bonus une vidéo de formation personnalisée à la livraison si vous le souhaitez lors de la signature du devis. Pour les modifications plus techniques, vous devrez passer par notre service de maintenance.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ CTA Section -->
+            <div style="background: rgba(96, 165, 250, 0.05); border: 1px solid rgba(96, 165, 250, 0.1); border-radius: 20px; padding: 3rem; text-align: center; max-width: 800px; margin: 0 auto 4rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; backdrop-filter: blur(10px);">
+                <div style="position: relative;">
+                    <img src="./assets/Meyland.jpeg" alt="Allan Meyland" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);">
+                    <div style="position: absolute; bottom: 5px; right: 5px; background: #25D366; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid #0f172a; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #60a5fa; font-size: 1.6rem; margin-bottom: 0.6rem; font-weight: 700;">Vous n'avez pas trouvé de réponse ?</h3>
+                    <p style="color: #94a3b8; font-size: 1.05rem; margin: 0; max-width: 500px;">Allan est disponible pour répondre à toutes vos questions.</p>
+                </div>
+                <a href="https://wa.me/33600000000" target="_blank" style="background: #3b82f6; color: white; padding: 1.1rem 2.5rem; border-radius: 14px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 1rem; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); font-size: 1.05rem;" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#2563eb';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#3b82f6';">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Contactez-nous
+                </a>
             </div>
+
+
+            <!-- Contact Section -->
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section" style="max-width: 1200px;">
+                <span class="section-subtitle">Contact</span>
+                <h2 class="section-title">Prêt à construire ensemble<br>le site que <span class="italic-blue">vous méritez ?</span></h2>
+                <p style="text-align: center; color: var(--color-text-muted); max-width: 600px; margin: -2rem auto 2rem;">
+                    Lancez votre nouveau site dans moins de 3 semaines.
+                </p>
+
+
+                
+                <div class="booking-container">
+                    <div class="booking-sidebar">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                            <img src="./assets/nathan.jpeg" alt="Nathan Michel" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #3b82f6;" />
+                            <div style="text-align: left;">
+                                <h4 style="color: #fff; margin: 0; font-size: 1.1rem;">Nathan Michel</h4>
+                                <p style="color: var(--color-text-muted); margin: 0; font-size: 0.85rem;">Fondateur @ EVA Studio</p>
+                            </div>
+                        </div>
+
+                        <div class="intro-text">
+                            <h3 class="intro-title" style="font-size: 1.3rem;">Appel avec Nathan @ EVA Studio</h3>
+                            <p class="intro-desc">
+                                Réservez un appel pour discuter de votre projet et en savoir plus sur nos services de design.
+                            </p>
+                        </div>
+
+                        <div style="margin: 2rem 0;">
+                            <p style="color: #fff; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; text-align: left;">Quelques clients avec qui j'ai collaboré :</p>
+                            <ul style="list-style: none; padding: 0; text-align: left;">
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-muted); font-size: 0.9rem;">
+                                    <span style="color: #3b82f6;">•</span> <span style="color: #60a5fa; font-weight: 600;">Screenfix</span> (+100 clients/sem)
+                                </li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-muted); font-size: 0.9rem;">
+                                    <span style="color: #3b82f6;">•</span> <span style="color: #a855f7; font-weight: 600;">Chim's Heritage</span> (Luxe & Art)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="booking-meta">
+                            <div class="meta-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                20 min
+                            </div>
+                            <div class="meta-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                                Google Meet
+                            </div>
+                            <div class="meta-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                Europe/Paris
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-calendar">
+                        <div class="calendar-header">
+                            <span class="current-month">Février 2026</span>
+                            <div class="month-nav">
+                                <button class="nav-arrow">&lt;</button>
+                                <button class="nav-arrow">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day-label">LUN.</div>
+                            <div class="day-label">MAR.</div>
+                            <div class="day-label">MER.</div>
+                            <div class="day-label">JEU.</div>
+                            <div class="day-label">VEN.</div>
+                            <div class="day-label">SAM.</div>
+                            <div class="day-label">DIM.</div>
+                            
+                            <div class="calendar-day disabled"></div><div class="calendar-day disabled"></div><div class="calendar-day disabled"></div><div class="calendar-day disabled"></div><div class="calendar-day disabled"></div><div class="calendar-day disabled"></div>
+                            <div class="calendar-day disabled">1</div>
+                            
+                            <div class="calendar-day disabled">2</div><div class="calendar-day disabled">3</div><div class="calendar-day disabled">4</div><div class="calendar-day disabled">5</div><div class="calendar-day disabled">6</div><div class="calendar-day disabled">7</div><div class="calendar-day disabled">8</div>
+                            
+                            <div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div>
+
+                            <div class="calendar-day">16</div><div class="calendar-day selected">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div>
+
+                            <div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day">26</div><div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day disabled">1</div>
+                        </div>
+                    </div>
+
+                    <div class="booking-slots">
+                        <div class="slots-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>mar. 17</span>
+                            <div style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem;">12 h 24 h</div>
+                        </div>
+                        <div class="slots-list">
+                            <button class="time-slot">11:40</button>
+                            <button class="time-slot">12:00</button>
+                            <button class="time-slot">12:20</button>
+                            <button class="time-slot">15:00</button>
+                            <button class="time-slot">15:20</button>
+                            <button class="time-slot">15:40</button>
+                            <button class="time-slot">16:00</button>
+                            <button class="time-slot">16:20</button>
+                            <button class="time-slot">16:40</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; color: var(--color-text-muted); font-size: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 8px; opacity: 0.6;">
+                    <span>powered by</span>
+                    <img src="./assets/Capture-2026-02-05-000609.png" alt="Cal.com" style="height: 18px; filter: grayscale(1) brightness(1.5);">
+                </div>
+            </section>
+
+            <!-- Contact Other Section -->
+            <section id="contact-other" class="section">
+                <span class="section-subtitle">VOUS AVEZ UNE QUESTION ?</span>
+                <h2 class="section-title">Besoin d'autres choses ? <br>N'hésitez pas à <span class="italic-blue">nous écrire.</span></h2>
+                <p style="text-align: center; color: var(--color-text-muted); max-width: 600px; margin: -2rem auto 4rem;">
+                    Nous répondrons à toutes vos questions dans les plus brefs délais.
+                </p>
+
+                <div class="form-container" style="max-width: 600px; margin: 0 auto;">
+                    <form id="contact-other-form">
+                        <div class="form-group">
+                            <label class="form-label">Votre Email</label>
+                            <input type="email" name="email" placeholder="email@exemple.com" class="form-input" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Votre Message</label>
+                            <textarea name="message" placeholder="Dites-nous tout..." class="form-textarea" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit" style="width: 100%; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(45deg);"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+
         </main>
 
+        <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -117,10 +595,10 @@
                 <div class="footer-column">
                     <h4>Ressources</h4>
                     <ul class="footer-links">
-                        <li><a href="./realisations.html">Nos Projets</a></li>
-                        <li><a href="./404.html">À propos</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#projects">Nos Projets</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
